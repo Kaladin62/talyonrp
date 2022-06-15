@@ -45,8 +45,8 @@ if not Config.UseDeferrals then
 
 	RegisterNUICallback('register', function(data, cb)
 		ESX.TriggerServerCallback('esx_identity:registerIdentity', function(callback)
-			if callback then
-				ESX.ShowNotification(_U('thank_you_for_registering'))
+			if callback then 
+				ESX.ShowNotification(_U('thank_you_for_registering'), 'success', 10000)
 				EnableGui(false)
 				if not ESX.GetConfig().Multichar then TriggerEvent('esx_skin:playerRegistered') end
 			else

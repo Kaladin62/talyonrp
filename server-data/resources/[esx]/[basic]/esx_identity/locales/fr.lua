@@ -1,11 +1,11 @@
-Locales['en'] = {
+Locales['fr'] = {
   ['show_active_character'] = 'Show Active Character',
   ['active_character'] = 'Active Character: ~b~%s~s~',
   ['error_active_character'] = "There was an error obtaining your data.",
   ['delete_character'] = 'Delete Current Character And Create a new one.',
   ['deleted_character'] = 'Character Deleted.',
   ['error_delete_character'] = "There was a problem deleting your character.",
-  ['thank_you_for_registering'] = "Successfully Registered, Enjoy!",
+  ['thank_you_for_registering'] = "Bravo, vous êtes maintenant enregistré !",
   ['registration_error'] = "There was an issue while Registering your character, please make sure the information Is correct.",
   ['debug_xPlayer_get_first_name'] = "Returns Your forename",
   ['debug_xPlayer_get_last_name'] = "Returns Your surname",

@@ -55,9 +55,25 @@ ESX.RegisterServerCallback('esx_skin:getPlayerSkin', function(source, cb)
 	end)
 end)
 
+ESX.RegisterCommand('forceskin', "_dev",function(source, args, user)
+	local _source = source
+	local target = tonumber(args[1])
+	local xPlayer = ESX.GetPlayerFromId(target)
+	
+	if target and xPlayer ~= nil then
+		xPlayer.triggerEvent('esx_skin:openSaveableMenu')
+	else
+		TriggerClientEvent('chatMessage', _source, "SYSTEM:", {255, 0, 0}, "Invalid arguments.")
+		return
+	end
+end, function(source, args, user)
+	TriggerClientEvent('chat:addMessage', source, { args = { '^1SYSTEM', 'Insufficient Permissions.' } })
+end, false, {help = '/forceskin (ID) - Force someone to change his skin'})
+
 ESX.RegisterCommand('skin', 'admin', function(xPlayer, args, showError)
 	xPlayer.triggerEvent('esx_skin:openSaveableMenu')
 end, false, {help = _U('skin')})
+
 
 ESX.RegisterCommand('skinsave', 'admin', function(xPlayer, args, showError)
 	xPlayer.triggerEvent('esx_skin:requestSaveSkin')

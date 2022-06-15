@@ -1,39 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+* {
+	font-family: 'Oswald', sans-serif;
+
+}
 body {
-	font-family: sans-serif;
+	font-family: 'Oswald', sans-serif;
+	overflow: hidden;
+	color: #000000;
 	overflow: hidden;
 	display: none;
-	color: #000000;
 }
 
+  
+  .star0 {
+	height: 1px;
+	width: 1px;
+	opacity: 1;
+	position: absolute;
+  }
+  
+  .star1 {
+	height: 2px;
+	width: 2px;
+	border-radius: 50%;
+	opacity: 1;
+	position: absolute;
+  }
+  
+  .star2 {
+	height: 3px;
+	width: 3px;
+	border-radius: 50%;
+	opacity: 1;
+	position: absolute;
+  }
+  
+  .star3 {
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	opacity: 1;
+	position: absolute;
+  }
+  
+  .test1 {
+  
+  width: 53%;
+  }
+    .test2 {
+  
+  width: 52%;
+  }
+    .test3 {
+  
+  width: 57%;
+  }
+  
 .dialog {
-	width: 332px;
-	opacity			: 0.95;
+	width: 40%;
 	position      	: absolute;
 	margin-left: auto;
 	margin-right: auto; 
-	top				: 30.0%;
+	top				: 7%;
 	padding: 10px;
-	left            : 50%; /* à 50%/50% du parent référent */
-	transform       : translate(-50%); /* décalage de 50% de sa propre taille */
-	background-color: #B7B7B7;
+	left            : 50%;
+	background: transparent;
+	transform       : translate(-50%);
 	border-radius   : 4px;
-	box-shadow: 0px 0px 50px 0px #000;
-	border-left:5px solid #000;
-	border:1px inset;
+	box-shadow: 0px 0px 50px 10px #000;
 	margin:5px;
 	margin-bottom:20px;
 	color: #000000;
+	background-color: rgba(22, 22, 22, 0.9);
+
 }
 
+h1 {
+
+
+	transition: all 0.3s ease;
+	text-align: center;
+	justify-content: center;
+	justify-items: center;
+
+}
+
+h1:hover {
+	transform: translate3d(0, -10px, 22px);
+	color: #825aa6;
+  }
+
+.header_holder {
+	color: #cacaca;
+	margin-bottom: 10px;
+	/* background-color: #825aa6; */
+	text-align: center;
+	justify-content: center;
+	justify-items: center;
+}
 input {
 	width: 100%;
 	padding: 10px;
-	text-align:left;
-	color: #000000;
+	text-align:center;
+	color: #cacaca;
+	caret-color: #825aa6;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: black;
+	color: #cacaca;
 	opacity: 1; /* Firefox */
 }
 
@@ -44,56 +120,127 @@ input {
 }
 
 .radio-toolbar label {
+	text-align: center;
 	display: inline-block;
-	margin-top: 5px;
-    background-color: #ddd;
-    padding: 10px 20px;
-    font-family: sans-serif, Arial;
+	margin-top: 10px;
+    background: linear-gradient(90deg, rgb(0, 24, 40) 0%, rgba(0, 24, 40, 0.397) 80%);
+    padding: 5px 10px;
+    font-family: 'Oswald', sans-serif;
 	font-size: 16px;
-	color: #000000;
-    border: 2px solid #444;
+	color: #ffffff;
 	border-radius: 4px;
-	width: 36%;
+	width: 100px;
+	border-bottom: 2px inset #825aa6;
+
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
-	width: 36%;
-    background-color:#3399FF;
-	border-color: #0033FF;
-	color: #000000;
+	width: 100px;
+	color: #ffffff;
+	background: linear-gradient(90deg, rgba(0, 24, 40, 0) 0%, rgba(0, 24, 40, 0.0) 80%);
+	background-color: #825aa6;
+	border-bottom: 2px inset #ffffff;
+	transform: scale(0.9);
+	
 }
 
-.radio-toolbar input[type="radio"]:focus + label {
-	border: 2px solid #444;
+/* .radio-toolbar input[type="radio"]:focus + label {
 	width: 36%;
-	color: #000000;
+	color: #cccccc;
+} */
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
-.radio-toolbar label:hover {
+/* .radio-toolbar label:hover {
 	background-color: #dfd;
 	width: 36%;
 	color: #000000;
-}
+} */
 
-button {
-	display: block;
+/* button {
+	position: static !important;
 	margin-top: 5px;
 	padding: 10px;
 	background-color: #373737;
     border: 2px solid #444;
 	color: #FFFFFF;
 	width: 100%;
+} */
+label {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	text-align: center;
+	width: 410px;
+	line-height: 26px;
+	margin-bottom: 10px;
+	color: white;
 }
 
-h1 {
-	display: block;
-	margin-top: 5px;
-	margin-right: 5px;
-	padding: 10px;
-	background-color: #506be6;
-	color: #000000;
-	width: 93%;
+
+
+.input {
+    outline: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 400px;
+    font-size: 14px;
+	line-height: 50px;
+	margin-left: 25%;
 	text-align: center;
+}
+
+.input--style-5 {
+	margin-bottom: 10px;
+    background: linear-gradient(90deg, rgb(0, 24, 40) 0%, rgba(0, 24, 40, 0.397) 80%);
+    line-height: 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 2px inset #825aa6;
+}
+
+.logo {
+	border-radius: 50%;
+}
+
+.btn {
+  margin-top: 50px;
+  border: 0;
+  background-color: transparent;
+  width: 240;
+  padding: 0;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.15s ease;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn:hover{
+	transform: scale(0.9);
+}
+
+
+
+.btn--main {
+  border-radius: 10px;
+  background-color: #825aa6;
+  background-image: linear-gradient(135deg, #825aa6, #825aa6);
+  color: #fff;
+  padding: 0 1.375em;
 }
 
 .range-wrap {
@@ -106,8 +253,8 @@ h1 {
 }
 
 .bubble {
-	background: #3399FF;
-	color: black;
+	background: #825aa6;
+	color: rgb(255, 255, 255);
 	padding: 4px 12px;
 	position: absolute;
 	border-radius: 4px;
@@ -118,10 +265,27 @@ h1 {
 .bubble::after {
 	content: "";
 	position: absolute;
-	width: 2px;
-	height: 2px;
-	background: #3399FF;
-	color: black;
-	top: -1px;
+	width: 15px;
+	height: 15px;
+	background: #825aa6;
+	color: rgb(255, 255, 255);
+	top: -10px;
 	left: 50%;
+	clip-path: polygon(53% 100%, 0 0, 100% 0);
+	transform: rotateX(50%);
+	rotate: 180deg;
 }
+
+
+input[type='range']::-webkit-slider-thumb {
+	cursor: ew-resize;
+
+  }
+
+
+.text_red {
+	font-weight: 900;
+	color: #825aa6;
+}
+
+

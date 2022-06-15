@@ -77,10 +77,14 @@ function ESX.SetPlayerData(key, val)
 	end
 end
 
-function ESX.ShowNotification(msg)
-	BeginTextCommandThefeedPost('STRING')
-	AddTextComponentSubstringPlayerName(msg)
-	EndTextCommandThefeedPostTicker(0,1)
+function ESX.ShowNotification(message, type, length)
+	if type == 'error' then
+			exports['okokNotify']:Alert("TalyonRP", message, length, 'error')
+	elseif type == 'info' then
+			exports['okokNotify']:Alert("TalyonRP", message, length, 'info')
+	elseif type == 'success' then
+			exports['okokNotify']:Alert("TalyonRP", message, length, 'success')
+	end
 end
 
 function ESX.ShowAdvancedNotification(sender, subject, msg, textureDict, iconType, flash, saveToBrief, hudColorIndex)
